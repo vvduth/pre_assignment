@@ -4,8 +4,6 @@ import React, { useState, useEffect } from "react";
 
 import Card from "./components/Card/Card";
 
-import Navbar from "./components/Navbar/Navbar";
-
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 
 import CardDetails from "./components/Card/CardDetails";
@@ -13,9 +11,6 @@ import CardDetails from "./components/Card/CardDetails";
 function App() {
   return (
     <Router>
-      <div className="App">
-        <Navbar />
-      </div>
       <Routes>
         <Route path="/" element={<Home />} />
         <Route path="/:id" element={<CardDetails />} />
@@ -30,8 +25,6 @@ const Home = () => {
   
   let { info, results } = fetchedData;
 
-  //let api = `https://rickandmortyapi.com/api/character/?page=${pageNumber}&name=${search}&status=${status}&gender=${gender}&species=${species}`;
-   //let api = `https://rickandmortyapi.com/api/character/?page=1`;
   let api = `https://jsonplaceholder.typicode.com/users`;
 
   useEffect(() => {

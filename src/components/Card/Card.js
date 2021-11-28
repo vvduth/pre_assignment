@@ -1,9 +1,7 @@
-import { Button } from "bootstrap";
 import React from "react";
 import { Link } from "react-router-dom";
 import styles from "./Card.module.scss";
-import CardDetails from "./CardDetails";
-
+import Avatar from "react-avatar";
 const Card = ({ results }) => {
   let display;
   //console.log(results);
@@ -20,6 +18,10 @@ const Card = ({ results }) => {
             <div
                 className={`${styles.card} d-flex flex-column justify-content-center`}
             >
+              <div className="img-fluid" alt="" >
+                  {/* <Gravatar size={150} email={name} default="identicon" style = {{borderRadius: "10px"}} /> */}
+                  <Avatar name = {name}  size = {150} round = {true}/>
+              </div>
               <div className={`${styles.content}`}>
                 <div className="fs-5 fw-bold mb-4">{name}</div>
                 <div className="">
