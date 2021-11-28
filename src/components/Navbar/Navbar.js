@@ -7,16 +7,16 @@ const Navbar = () => {
     <nav className="navbar navbar-expand-lg navbar-light bg-light mb-4">
       <div className="container">
         <Link to="/" className="navbar-brand fs-3 ubuntu">
-          Rick & Morty <span className="text-primary">WiKi</span>
+          Pre Assignment <span className="text-primary">Duc Thai</span>
         </Link>
-        <style jsx>{`
+        {/* <style jsx>{`
           button[aria-expanded="false"] > .close {
             display: none;
           }
           button[aria-expanded="true"] > .open {
             display: none;
           }
-        `}</style>
+        `}</style> */}
         <button
           className="navbar-toggler border-0"
           type="button"
@@ -29,26 +29,7 @@ const Navbar = () => {
           <span class="fas fa-bars open text-dark"></span>
           <span class="fas fa-times close text-dark"></span>
         </button>
-        <div
-          className="collapse navbar-collapse justify-content-end"
-          id="navbarNavAltMarkup"
-        >
-          <div className="navbar-nav fs-5">
-            <NavLink to="/" className="nav-link">
-              Characters
-            </NavLink>
-            <NavLink to="/episodes" className="nav-link">
-              Episode
-            </NavLink>
-            <NavLink
-              activeClassName="active"
-              className="nav-link"
-              to="/location"
-            >
-              Location
-            </NavLink>
-          </div>
-        </div>
+      
       </div>
     </nav>
   );
