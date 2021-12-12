@@ -4,6 +4,8 @@ import { useParams } from "react-router-dom";
 const CardDetails = () => {
   let { id } = useParams();
 
+  console.log(id);
+
   let [fetchedData, updateFetchedData] = useState([]);
   let { name, username, company, email, phone, address ,website} = fetchedData;
 

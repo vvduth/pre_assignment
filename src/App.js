@@ -23,7 +23,7 @@ const Home = () => {
   
   let [fetchedData, updateFetchedData] = useState([]);
   
-  let { info, results } = fetchedData;
+  
 
   let api = `https://jsonplaceholder.typicode.com/users`;
 
@@ -32,9 +32,11 @@ const Home = () => {
       let data = await fetch(api).then((res) => res.json());
       updateFetchedData(data);
       console.log(data);
-      console.log(results);
+      
     })();
   }, [api]);
+
+
   return (
     <div className="App">
       <h1 className="text-center mb-3">Users</h1>
